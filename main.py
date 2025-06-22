@@ -107,8 +107,8 @@ def main():
         try:
             column, operator, value = parse_where_condition(args.where)
             data = filter_data(data, column, operator, value)
-        except ValueError as e:
-            print(f"Ошибка в условии WHERE: {e}")
+        except ValueError as error:
+            print(f"Ошибка в условии WHERE: {error}")
             return
 
     # Применение агрегации, если указаны параметры
